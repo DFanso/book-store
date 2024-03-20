@@ -48,11 +48,11 @@ The Bookstore API is a RESTful service designed to manage a collection of books,
    ```
 
 7. The application should now be running on `http://localhost:9000`. Access the Swagger documentation at `http://localhost:9000/api` for an interactive API documentation and testing interface.
-8. Use the Token in Authentication
+8. Use the Token in Header Authentication
 
 ## API Endpoints
 
-### POST /books
+### POST v1/books
 
 - Description: Add a new book to the collection.
 - Request Body:
@@ -68,7 +68,7 @@ The Bookstore API is a RESTful service designed to manage a collection of books,
 
 - Response: HTTP 201 (Created), with the created book object.
 
-### GET /books
+### GET v1/books
 
 - Description: Retrieve a list of all books in the collection.
 - Response: HTTP 200 (OK), with an array of book objects.
