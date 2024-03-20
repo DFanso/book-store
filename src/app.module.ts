@@ -4,6 +4,7 @@ import { AppService } from './app.service';
 import * as Joi from 'joi';
 import { ConfigModule } from '@nestjs/config';
 import { MongooseModule, MongooseModuleOptions } from '@nestjs/mongoose';
+import { BooksModule } from './books/books.module';
 import mongoose from 'mongoose';
 
 mongoose.set('debug', (collectionName, methodName, ...methodArgs) => {
@@ -20,6 +21,7 @@ mongoose.set('debug', (collectionName, methodName, ...methodArgs) => {
       isGlobal: true,
       validationSchema: Joi.object({
         MONGO_URI: Joi.string().required(),
+        TOKEN: Joi.string().required(),
       }),
     }),
     MongooseModule.forRoot(
@@ -29,6 +31,7 @@ mongoose.set('debug', (collectionName, methodName, ...methodArgs) => {
         autoCreate: true,
       } as MongooseModuleOptions,
     ),
+    BooksModule,
   ],
   controllers: [AppController],
   providers: [AppService],
