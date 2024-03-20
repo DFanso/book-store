@@ -36,7 +36,7 @@ async function bootstrap() {
   );
 
   app.use((req, res, next) => {
-    if (req.path.startsWith('/api') || req.path.startsWith('/')) {
+    if (req.path.startsWith('/api')) {
       next();
     } else {
       new AuthMiddleware().use(req, res, next);
