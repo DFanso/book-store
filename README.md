@@ -2,7 +2,7 @@
 
 ## Description
 
-The Bookstore API is a RESTful service designed to manage a collection of books, allowing users to perform CRUD operations on books stored in a database. This service is built using NestJS, a progressive Node.js framework for building efficient and scalable server-side applications.
+The Bookstore API is a RESTful service designed to manage a collection of books, allowing users to perform Create and GetAll operations on books stored in a database. This service is built using NestJS, a progressive Node.js framework for building efficient and scalable server-side applications.
 
 ## Technologies Used
 
